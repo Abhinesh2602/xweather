@@ -44,7 +44,7 @@ function App() {
         </button>
       </form>
 
-      {loading && <p>Loading data…</p>}
+      {loading && <p>Loading data...</p>}
 
       {weatherDetails != null && weatherDetails.current && (
         <div className="weather-cards">
