@@ -8,8 +8,6 @@ function App() {
   const [weatherDetails, setWeatherDetails] = useState(null);
   const [loading, setisLoading] = useState(false);
 
-  console.log(weatherDetails);
-
   const handleInputChange = (e) => {
     setLocation(e.target.value);
   };
@@ -49,20 +47,20 @@ function App() {
       {loading && <p>Loading data…</p>}
 
       {weatherDetails != null && weatherDetails.current && (
-        <div className="weatheDetailsContainer">
-          <div className="weatherDetailCard">
+        <div className="weather-cards">
+          <div className="weather-card">
             <h3>Temperature</h3>
             <p>{weatherDetails.current.feelslike_c} °C</p>
           </div>
-          <div className="weatherDetailCard">
+          <div className="weather-card">
             <h3>Humidity</h3>
             <p>{weatherDetails.current.humidity}%</p>
           </div>
-          <div className="weatherDetailCard">
+          <div className="weather-card">
             <h3>Condition</h3>
             <p>{weatherDetails.current.condition.text}</p>
           </div>
-          <div className="weatherDetailCard">
+          <div className="weather-card">
             <h3>Wind Speed</h3>
             <p>{weatherDetails.current.wind_kph} kph</p>
           </div>
